@@ -10,17 +10,20 @@ import PreLoader from "./components/PreLoader";
 import Publications from "./publications/Publications";
 import Team from "./components/Team";
 import About from "./components/About";
+import { HelmetProvider } from "react-helmet-async";
 const App = () => {
   return (
     <div>
-      <PreLoader />
-      <Banner />
-      <About />
-      <Skills />
-      <Team />
-      <Publications />
-      <Contact />
-      <Footer />
+      <HelmetProvider>
+        <PreLoader />
+        <Banner />
+        <About />
+        <Skills />
+        <Team />
+        <Publications />
+        <Contact />
+        <Footer />
+      </HelmetProvider>
     </div>
   );
 };
